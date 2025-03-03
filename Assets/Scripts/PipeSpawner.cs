@@ -16,11 +16,9 @@ public class PipeSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnPipes());
-        Debug.Log("coroutine started");
     }
 
     IEnumerator SpawnPipes(){
-        Debug.Log("coroutine running");
         while(true){
             if(!gameManager.GetGameFinished() && gameManager.GetGameStarted()){
                 newPosition.y = Random.Range(bottomLimit, topLimit);
